@@ -1,0 +1,166 @@
+// @import "./index.scss";
+$bg_color: #646cff;
+
+$grid-width: 40px;
+$gutter-width: 10px;
+$basic: 20px;
+@function generator-width($width) {
+  @return $basic + $width;
+}
+
+button {
+  width: generator-width(20px);
+}
+// @mixin bgColor($color) {
+//   body {
+//     background-color: $color;
+//     @content;
+//   }
+// }
+
+// .card {
+//   @include bgColor(red) {
+//     color: $bg_color;
+//   }
+// }
+// @mixin bgColor($color) {
+//   background-color: $color;
+// }
+
+// .card {
+//   @include bgColor(red);
+//   button {
+//     @include bgColor(green);
+//   }
+// }
+// $i: 6;
+// @while $i > 0 {
+//   .item-#{$i} {
+//     width: 2em * $i;
+//   }
+//   $i: $i - 2;
+// }
+
+// body {
+//   @each $fontFamily in Arial, "Helvetica Neue", Helvetica, sans-serif {
+//     font-family: $fontFamily;
+//   }
+// }
+
+// @for $i from 2 through 3 {
+//   .button-#{$i} {
+//     width: 2em * $i;
+//   }
+// }
+
+// .card {
+//   @if false {
+//     width: 8in;
+//   } @else {
+//     width: 10in;
+//   }
+// }
+
+// @media print {
+//   .page {
+//     width: 8in;
+//     @at-root (without: media) {
+//       color: red;
+//     }
+//   }
+// }
+
+// body {
+//   color: blue;
+//   @at-root button {
+//     font-weight: bold;
+//   }
+// }
+
+// .notice {
+//   font-size: 5em;
+// }
+// body {
+//   color: blue;
+//   @extend .notice !optional;
+// }
+
+// body .card%extendName {
+//   color: blue;
+//   font-weight: bold;
+//   font-size: 2em;
+//   &.notice {
+//     font-size: 5em;
+//   }
+// }
+// .notice {
+//   @extend %extendName !optional;
+// }
+
+// body .card button {
+//   background-color: $bg_color;
+//   p {
+//     @extend button;
+//   }
+// }
+
+// body {
+//   background-color: aquamarine;
+//   .card {
+//     @extend body;
+//     .seriousError {
+//       color: #ffffff;
+//     }
+//     button {
+//       @extend .card;
+//     }
+//   }
+// }
+
+// .card {
+//   background-color: #646cff;
+//   //编写横屏样式
+//   @media screen and (orientation: landscape) {
+//     background-color: red;
+//   }
+// }
+
+// $name: card;
+// .#{$name} {
+//   background-color: $bg_color;
+//   button {
+//     background-color: #f9f9f9;
+//     font-size: 10px + 10pt;
+//     color: #010203;
+//   }
+// }
+
+// .card {
+//   background-color: $bg_color;
+//   @import "./test.scss";
+// }
+
+// .card {
+//   background-color: $bg_color;
+//   button {
+//     background-color: #f9f9f9;
+//     font: {
+//       family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+//       size: 40px;
+//       weight: bold;
+//     }
+//   }
+//   /*测试多行注释*/
+//   //测试单行注释
+//   &:hover {
+//     background-color: aquamarine;
+//   }
+// }
+
+// @mixin button-color($selector) {
+//   .card #{$selector} {
+//     background-color: $bg_color;
+//   }
+// }
+
+// @include button-color(".button-color");
